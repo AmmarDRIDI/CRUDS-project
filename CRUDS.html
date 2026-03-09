@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="CRUDS.css">
+</head>
+
+<body>
+
+
+    <div class="cruds">
+
+        <div class="head">
+            <h1>cruds</h1>
+            <p>create read update delete search</p>
+        </div>
+
+
+        <div class="inputs">
+
+            <input type="text" placeholder="title" id="title">
+
+            <div class="price">
+            <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+            <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+            <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+            <small id="total">0</small>
+            </div>
+            
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button onclick="CreateItem()" id="create">Create</button>
+            <p id="msg" class="hide">one of the inputs is empty you should complete them</p>
+
+            <input type="text" placeholder="search" id="search" onkeyup="showDataSearch()">
+
+            <div class="search">
+                <button id="ByTitle"  onclick="SearchByTitle()">Search By Title</button>
+                <button id="ByCategory" onclick="SearchByCategory()">Search By Category</button>
+            </div>
+
+            <button id="deleteAll" class="hide"  onclick="deleteAllData()">Delete All</button>
+
+        </div>
+        <div class="outputs">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tbody id="tbody">
+                    
+                    
+                
+                </tbody>
+                
+            </table>
+        </div>
+        
+
+
+
+
+    </div>
+
+
+
+
+    <script src="CRUDS.js"></script>
+</body>
+
+
+</html>
